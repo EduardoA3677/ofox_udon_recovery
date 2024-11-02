@@ -27,22 +27,21 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export LC_ALL="C"
   
 # Maintaining Info
-    export OF_MAINTAINER="hoangzk9as,cd-Crypton"
+    export OF_MAINTAINER="EduardoA3677"
     export FOX_VERSION=$(date +%y.%m.%d)
     export FOX_BUILD_TYPE=Unofficial
   	
 # Device Info
     export FOX_ARCH=arm64
     export FOX_VARIANT="12.1"
-    export TARGET_DEVICE_ALT="RMX3300,RMX3301,RE547F,RED8AC,RED8ACL1,ossi,qssi"
+    export TARGET_DEVICE_ALT="PHK110,CPH2487,udon,RED8AC,RED8ACL1,ossi,qssi"
   
 # Funtions
-    export FOX_REPLACE_BUSYBOX_PS=1
+    export FOX_USE_BUSYBOX_BINARY=1
     export FOX_REPLACE_TOOLBOX_GETPROP=1
     export FOX_USE_TAR_BINARY=1
     export FOX_USE_SED_BINARY=1
     export FOX_USE_BASH_SHELL=1
-    export FOX_ASH_IS_BASH=1
     export FOX_USE_GREP_BINARY=1
     export FOX_USE_XZ_UTILS=1
     export FOX_USE_NANO_EDITOR=1
@@ -58,19 +57,31 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 # Partitions Handler
     export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
     export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+
+# Use magisk boot for patching
+    export OF_USE_MAGISKBOOT=1
+    export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
   
 # A/B-Related
     export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
+    export FOX_AB_DEVICE=1
     export OF_VIRTUAL_AB_DEVICE=1
-    export OF_VANILLA_BUILD=0
   
 # Other Patches
     export OF_NO_RELOAD_AFTER_DECRYPTION=1
     export OF_FBE_METADATA_MOUNT_IGNORE=1
-    export OF_PATCH_AVB20=1
     export OF_NO_SPLASH_CHANGE=1
+    export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
     export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
-    export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
+
+# Run a process after formatting data to work-around MTP issues
+    export OF_RUN_POST_FORMAT_PROCESS=1
+
+# OTA for custom ROMs
+    export OF_SUPPORT_ALL_PAYLOAD_OTA_UPDATES=1
+    export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
+    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
