@@ -5,6 +5,7 @@
 
 # Userdata/Metadata partitions
 /metadata       ext4    /dev/block/by-name/metadata                                         flags=display=Metadata
+/data           f2fs    /dev/block/bootdevice/by-name/userdata                              flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0
 
 # Other partitions
 /boot           emmc    /dev/block/bootdevice/by-name/boot                                  flags=slotselect
