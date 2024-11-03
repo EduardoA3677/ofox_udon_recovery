@@ -40,7 +40,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_VERSION="R12.2"
 fi
 
+export LC_ALL="C"
+
 # Some about us
+    
+export TARGET_ARCH=arm64
 export FOX_VERSION="R12.1"
 export OF_MAINTAINER=EduardoA3677
 
