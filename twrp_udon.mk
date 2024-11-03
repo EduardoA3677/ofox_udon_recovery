@@ -9,10 +9,10 @@
 PRODUCT_DEVICE := udon
 PRODUCT_RELEASE_NAME := $(PRODUCT_DEVICE)
 PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
-PRODUCT_BRAND := OnePlus
+PRODUCT_BRAND := oneplus
 PRODUCT_MODEL := CPH2487
 PRODUCT_PLATFORM := taro
-PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_MANUFACTURER := oneplus
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
