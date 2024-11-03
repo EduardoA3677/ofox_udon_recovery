@@ -62,9 +62,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Super Partitions
 BOARD_SUPER_PARTITION_SIZE := 15032385536
-BOARD_SUPER_PARTITION_GROUPS := oplus_dynamic_partitions
-BOARD_OPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm odm_dlkm product system system_ext vendor vendor_dlkm
-BOARD_OPLUS_DYNAMIC_PARTITIONS_SIZE := 9122611200
+BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm odm_dlkm product system system_ext vendor vendor_dlkm
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true

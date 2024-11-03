@@ -106,7 +106,7 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := CPH2487,ossi,qssi
+TARGET_OTA_ASSERT_DEVICE := CPH2487,PHK110,ossi,qssi
 
 # Inherit some common sm8450 stuff.
 #$(call inherit-product, device/oneplus/sm8450-common/common.mk)
