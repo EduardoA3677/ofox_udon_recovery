@@ -64,9 +64,9 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 export OF_USE_GREEN_LED=0
 
 # Use magisk boot for patching
+export FOX_USE_SPECIFIC_MAGISK_ZIP=$(pwd)/device/oneplus/udon/Magisk-v28.0.zip
 export OF_USE_MAGISKBOOT=1
 export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
 # We have a/b partitions
 export FOX_AB_DEVICE=1
