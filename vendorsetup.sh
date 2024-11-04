@@ -35,12 +35,17 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export LC_ALL="C.UTF-8"
+     	echo "test =============="
+	export FOX_VERSION="R12.2"
+fi
+
+	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
  	
  	#OFR build settings & info
    
    export TARGET_ARCH=arm64
+   export FOX_VERSION="R12.1"
  	export FOX_VANILLA_BUILD=1
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export TARGET_DEVICE_ALT="PHK110, CPH2487, udon, OP5913L1, OP5961L1, ossi, qss"
