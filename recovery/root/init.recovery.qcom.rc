@@ -28,6 +28,7 @@
 import /init.recovery.qcom_decrypt.rc
 
 on fs
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     mkdir /dev/block/bootdevice/ 0770 shell system
     mkdir /dev/block/bootdevice/by-name/ 0770 shell system
