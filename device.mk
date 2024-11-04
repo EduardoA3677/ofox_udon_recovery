@@ -62,6 +62,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# fastbootd
+PRODUCT_PACKAGES += fastbootd
+
 # Fastboot/D
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
