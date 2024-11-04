@@ -1,10 +1,10 @@
 <manifest version="1.0" type="device">
-    <hal format="hidl" optional="true">
-        <name>android.hardware.boot</name>
-        <transport>passthrough</transport>
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.wifi.hostapd</name>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IBootControl</name>
+            <name>IOplusHostapd</name>
             <instance>default</instance>
         </interface>
     </hal>
