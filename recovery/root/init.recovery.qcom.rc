@@ -54,7 +54,7 @@ on property:twrp.decrypt.done=true
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on boot
-    start health-hal-2-1
+    setprop sys.usb.config adb
 
 on property:twrp.modules.loaded=true
     # Mount firmware
@@ -65,5 +65,6 @@ on property:twrp.modules.loaded=true
     write /sys/kernel/boot_adsp/boot 1
     wait /sys/class/power_supply/battery
     start health-hal-2-1
+    start vendor.qti.vibrator
     umount /firmware
     
