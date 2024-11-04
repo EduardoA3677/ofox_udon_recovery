@@ -66,7 +66,10 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libdmabufheap \
     libhidlmemory \
     libion \
+    libspl \
+    libops \
     libnetutils \
+    libxml2 \
     vendor.display.config@1.0 \
     vendor.display.config@2.0 \
     libdebuggerd_client
