@@ -1,6 +1,8 @@
 # Copyright (C) 2024 The Android Open Source Project
 # SPDX-License-Identifier: Apache-2.0
 
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
+
 # SDK
 BOARD_SYSTEMSDK_VERSIONS := 32
 
