@@ -63,6 +63,7 @@ fi
 	export FOX_USE_XZ_UTILS=1
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_NANO_EDITOR=1
+   export FOX_USE_GREP_BINARY=1
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=$(pwd)/device/oneplus/udon/Magisk-v28.0.zip
 
 	#OTA
@@ -95,6 +96,7 @@ fi
 
    export OF_ENABLE_LPTOOLS=1
  
+   export OF_FBE_METADATA_MOUNT_IGNORE=1
    export OF_DISABLE_OTA_MENU=1
    export OF_DYNAMIC_FULL_SIZE=9663676416
    export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
