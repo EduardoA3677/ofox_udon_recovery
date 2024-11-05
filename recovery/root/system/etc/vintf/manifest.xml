@@ -2,9 +2,10 @@
     Input:
         manifest.xml
         framework_manifest.xml
+        oplus_device_framework_manifest.xml
 -->
 <manifest version="4.0" type="framework">
-    <hal format="hidl">
+    <hal format="hidl" max-level="6">
         <name>android.frameworks.displayservice</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -88,15 +89,64 @@
         <name>netutils-wrapper</name>
         <version>1.0</version>
     </hal>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.commondcs</name>
+        <interface>
+            <name>ICommonDcsAidlHalService</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>ICommonDcsAidlHalService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.oplusSensor</name>
+        <interface>
+            <name>ISensorFeature</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>ISensorFeature/default</fqname>
+    </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.atcmdfwd</name>
+        <name>vendor.oplus.hardware.osense.client</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IAtCmdFwd</name>
-            <instance>AtCmdFwdService</instance>
+            <name>IOsenseHalReporter</name>
+            <instance>OsenseHalReporter</instance>
         </interface>
-        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
+        <fqname>@1.0::IOsenseHalReporter/OsenseHalReporter</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.osense.client</name>
+        <interface>
+            <name>IOsenseAidlHalReporter</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>IOsenseAidlHalReporter/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.qccsyshal</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IQccsyshal</name>
+            <instance>qccsyshal</instance>
+        </interface>
+        <fqname>@1.2::IQccsyshal/qccsyshal</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.systemhelper</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISystemEvent</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISystemResource</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISystemEvent/default</fqname>
+        <fqname>@1.0::ISystemResource/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.keystore</name>
@@ -114,5 +164,6 @@
         <version>30</version>
         <version>31</version>
         <version>32</version>
+        <version>33</version>
     </system-sdk>
 </manifest>
