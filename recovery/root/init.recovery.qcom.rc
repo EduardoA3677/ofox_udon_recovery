@@ -54,7 +54,13 @@ on property:twrp.modules.loaded=true
     write /sys/kernel/boot_adsp/boot 1
     wait /sys/class/power_supply/battery
     mkdir /dev/fscklogs 0770 root system
-    start vendor.health-default
     start health-hal-2-1
     start vendor.qti.vibrator
     umount /firmware
+
+service keystore2 /system/bin/keystore2
+    class main
+    user system
+    group system
+    capabilities BLOCK_SUSPEND
+    seclabel u:r:keystore:s0

@@ -98,8 +98,8 @@ SOONG_CONFIG_ufsbsg_ufsframework := bsg
 # Support to compile recovery without msm headers
 TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
-# Keystore
 PRODUCT_PACKAGES += \
+    android.hardware.security.keymint@1.0 \
     android.system.keystore2
 
 # qcom decryption
